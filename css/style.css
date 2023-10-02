@@ -30,12 +30,11 @@
 
 .utent {
     background-color: #FFFFFF;
-    left: 0;
 }
 
 .user {
     background-color: #D5F9BA;
-    right: 0;
+    grid-column: 3;
 }
 
 /* Body  */
@@ -116,7 +115,7 @@ i {
 .chatCont {
     width: 100%;
     height: calc(100% - 140px);
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .sendBar {
@@ -309,8 +308,8 @@ i {
     height: 50px;
     margin: 5px 0;
     list-style: none;
-    display: flex;
-    position: relative;
+    display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .chatCont .sms {
@@ -319,7 +318,6 @@ i {
     height: 100%;
     display: flex;
     border-radius: 10px;
-    position: absolute;
 }
 
 .chatCont .sms span {
