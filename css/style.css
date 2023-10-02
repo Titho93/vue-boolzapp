@@ -22,6 +22,11 @@
     background-color: yellow;
 }
 
+/* Active class  */
+.active {
+    background-color: #e9ebebc4;
+}
+
 /* Body  */
 
 body {
@@ -76,6 +81,7 @@ i {
     height: 50px;
     display: flex;
     padding: 7px;
+    background-color: #FAFAFA;
 }
 
 .userCont {
@@ -176,4 +182,44 @@ i {
     flex-grow: 2;
     border: 1px solid #FAFAFA;
     padding-left: 10px;
+}
+
+/* userCont  */
+
+.userCont li {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    border-top: 1px solid #E9EBEB;
+}
+
+.userCont .utentImg {
+    flex-grow: 0;
+}
+
+.userCont .utentImg img {
+    width: 60px;
+    border-radius: 50%;
+}
+
+.userCont .utentName {
+    flex-grow: 2;
+    padding-left: 20px;
+    padding-top: 5px;
+}
+
+.userCont .utentName span {
+    font-size: 18px;
+}
+
+.userCont .utentName p {
+    font-size: 14px;
+    color: #BAC4D0;
+}
+
+.userCont .utentLastAcces {
+    font-size: 13px;
+    color: #BAC4D0;
+    flex-grow: 0;
 }
