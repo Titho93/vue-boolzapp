@@ -98,6 +98,8 @@ i {
     height: 70px;
     border-left: 1px solid #E3DBD3;
     background-color: #EAEAEA;
+    display: flex;
+    padding: 10px 0;
 }
 
 .chatCont {
@@ -221,5 +223,30 @@ i {
 .userCont .utentLastAcces {
     font-size: 13px;
     color: #BAC4D0;
+    flex-grow: 0;
+}
+
+/* chatBar  */
+
+.chatBar .activeUserBar img {
+    flex-grow: 0;
+}
+
+.chatBar .activeUserName {
+    flex-grow: 2;
+    margin: auto 5px;
+}
+
+.chatBar .activeUserName span {
+    font-size: 16px;
+}
+
+.chatBar .activeUserName p {
+    font-size: 14px;
+    color: #BAC4D0;
+}
+
+
+.chatBar .buttonsGrid {
     flex-grow: 0;
 }
