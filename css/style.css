@@ -23,8 +23,19 @@
 }
 
 /* Active class  */
+
 .active {
     background-color: #e9ebebc4;
+}
+
+.utent {
+    background-color: #FFFFFF;
+    left: 0;
+}
+
+.user {
+    background-color: #D5F9BA;
+    right: 0;
 }
 
 /* Body  */
@@ -280,4 +291,49 @@ i {
 .sendBar .audioSend {
     flex-grow: 0;
     margin: auto 30px;
+}
+
+/* chatCont   */
+
+.chatCont ul {
+    margin: 0 auto;
+    width: 80%;
+    height: 100%;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.chatCont li {
+    width: 100%;
+    height: 50px;
+    margin: 5px 0;
+    list-style: none;
+    display: flex;
+    position: relative;
+}
+
+.chatCont .sms {
+    width: 40%;
+    min-width: 250px;
+    height: 100%;
+    display: flex;
+    border-radius: 10px;
+    position: absolute;
+}
+
+.chatCont .sms span {
+    line-height: 50px;
+    display: inline-block;
+    padding: 0 15px;
+    flex-grow: 2;
+}
+
+.chatCont .sms .sendTime {
+    align-self: flex-end;
+    font-size: 10px;
+    color: #BDC4BA;
+    flex-grow: 0;
+    padding-right: 5px;
+    padding-bottom: 5px;
 }
