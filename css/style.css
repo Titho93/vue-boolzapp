@@ -4,8 +4,63 @@
     box-sizing: border-box;
 }
 
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
 body {
     width: 100vw;
     height: 100vh;
     background: linear-gradient(#009688 0%, #009688 20%, #D9DBD4 20%, #D9DBD4 100%);
+}
+
+.container {
+    display: flex;
+    background-color: #EAEAEA;
+    width: 80%;
+    height: 95%;
+    margin: 25px auto;
+}
+
+.leftCont {
+    width: 40%;
+    height: 100%;
+}
+
+.rightCont {
+    width: 60%;
+    height: 100%;
+}
+
+.userBar {
+    width: 100%;
+    height: 70px;
+}
+
+.notice {
+    width: 100%;
+    height: 80px;
+}
+
+.searchBar {
+    width: 100%;
+    height: 50px;
+}
+
+.chatCont {
+    width: 100%;
+    height: calc(100% - 200px);
+    overflow-y: scroll;
 }
