@@ -51,11 +51,10 @@
                         </div>
                         <div class="utentName">
                             <span>{{contact.name}}</span>
-                            <p v-for="(message, index) in contact.messages[contact.messages.length - 1]">
-                                {{message}}</p>
+                            <p>{{contact.messages[contact.messages.length - 1].message}}</p>
                         </div>
                         <div class="utentLastAcces">
-                            <span>12.00</span>
+                            <span>{{contact.messages[contact.messages.length - 1].date}}</span>
                         </div>
                     </li>
                 </ul>
