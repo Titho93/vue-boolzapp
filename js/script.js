@@ -170,7 +170,8 @@ createApp({
             ],        
             counter: 0,
             activeContact: '',
-            newMessage: ''
+            newMessage: '',
+            lastMessage: ''
         }
     },
     methods:{
@@ -184,5 +185,7 @@ createApp({
             }
 
         }
+
     }
 }).mount('#app')
+
