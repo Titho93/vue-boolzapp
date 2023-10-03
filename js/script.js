@@ -169,10 +169,20 @@ createApp({
                 }
             ],        
             counter: 0,
-            activeContact: ''
+            activeContact: '',
+            newMessage: ''
         }
     },
     methods:{
-        
+        sendMessage(){
+            this.contacts[this.counter].messages.push(this.newMessage);
+
+            this.newMessage = {
+                date: '12:00',
+                message: '',
+                status: 'sent'
+            }
+
+        }
     }
 }).mount('#app')
