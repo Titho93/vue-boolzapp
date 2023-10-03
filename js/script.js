@@ -168,7 +168,8 @@ createApp({
                     ],
                 }
             ],        
-            counter: 0
+            counter: 0,
+            activeContact: ''
         }
     },
     methods:{

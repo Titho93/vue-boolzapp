@@ -64,11 +64,11 @@
             <div class="chatBar">
                 <div class="activeUserBar">
                     <div class="userImg">
-                        <img src="img/avatar_1.jpg" alt="Michele">
+                        <img :src="contacts[counter].avatar" alt="">
                     </div>
                 </div>    
                 <div class="activeUserName">
-                    <span>Michele</span>
+                    <span>{{contacts[counter].name}}</span>
                     <p>Ultimo accesso oggi alle 12:00</p>
                 </div>    
                 <div class="buttonsGrid">
