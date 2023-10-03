@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Vue  -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- Luxon  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/3.4.3/luxon.min.js" integrity="sha512-gUQcFuEaDuAEqvxIQ9GDdMcCeFmG5MPnoc6ruJn+nyCNHrHM2oB97GOVLIOiixzTxPYmIfEQbOoQmx55UscLyw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <title>Boolzapp</title>
 </head>
@@ -49,11 +51,11 @@
                         </div>
                         <div class="utentName">
                             <span>{{contact.name}}</span>
-                            <p v-for="(lastMessage, index) in contact.messages[contact.messages.length - 1]">
-                                {{lastMessage}}</p>
+                            <p v-for="(message, index) in contact.messages[contact.messages.length - 1]">
+                                {{message}}</p>
                         </div>
                         <div class="utentLastAcces">
-                            <span>12:00</span>
+                            <span>{{clock}}</span>
                         </div>
 
                     </li>
@@ -84,7 +86,7 @@
                     <li v-for="(message, index) in contacts[counter].messages">
                         <div :class="message.status === 'sent' ? 'user' : 'utent'" class="sms">
                             <span>{{message.message}}</span>
-                            <div class="sendTime">15:50</div>
+                            <div class="sendTime">{{message.date}}</div>
                         </div>
                     </li>
                 </ul>
