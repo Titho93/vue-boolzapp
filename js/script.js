@@ -170,18 +170,39 @@ createApp({
             ],        
             counter: 0,
             activeContact: '',
-            newMessage: '',
-            lastMessage: ''
+            lastMessage: '',
+            newMessage: {
+                date: '12:00',
+                message: '',
+                status: 'sent'
+            },
+            newAnswer: {
+                date: '12:00',
+                message: 'ok',
+                status: 'received'
+            }
+
         }
     },
     methods:{
         sendMessage(){
             this.contacts[this.counter].messages.push(this.newMessage);
 
+            setTimeout(() => {
+                this.contacts[this.counter].messages.push(this.newAnswer);
+            },1000);
+
+
             this.newMessage = {
                 date: '12:00',
                 message: '',
                 status: 'sent'
+            },
+
+            this.newAnswer = {
+                date: '12:00',
+                message: 'ok',
+                status: 'received'
             }
 
         }
