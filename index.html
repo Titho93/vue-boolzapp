@@ -81,7 +81,7 @@
                 <ul>
 
                     <li v-for="(message, index) in contacts[counter].messages">
-                        <div class="sms user">
+                        <div :class="message.status === 'sent' ? 'user' : 'utent'" class="sms">
                             <span>{{message.message}}</span>
                             <div class="sendTime">15:50</div>
                         </div>
