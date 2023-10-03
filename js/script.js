@@ -172,12 +172,12 @@ createApp({
             activeContact: '',
             lastMessage: '',
             newMessage: {
-                date: '12:00',
+                date: '',
                 message: '',
                 status: 'sent'
             },
             newAnswer: {
-                date: '12:00',
+                date: '',
                 message: 'ok',
                 status: 'received'
             }
@@ -194,15 +194,15 @@ createApp({
 
 
             this.newMessage = {
-                date: '12:00',
+                date: '',
                 message: '',
-                status: 'sent'
+                status: ''
             },
 
             this.newAnswer = {
-                date: '12:00',
+                date: '',
                 message: 'ok',
-                status: 'received'
+                status: ''
             }
 
         }
