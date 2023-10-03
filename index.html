@@ -10,7 +10,7 @@
     <!-- Vue  -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <!-- Luxon  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/3.4.3/luxon.min.js" integrity="sha512-gUQcFuEaDuAEqvxIQ9GDdMcCeFmG5MPnoc6ruJn+nyCNHrHM2oB97GOVLIOiixzTxPYmIfEQbOoQmx55UscLyw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src=" https://cdn.jsdelivr.net/npm/luxon@3.4.3/build/global/luxon.min.js "></script>
 
     <title>Boolzapp</title>
 </head>
@@ -42,9 +42,9 @@
             <div class="userCont">
                 <ul>
                     <li v-for="(contact, index) in contacts"
-                    @click="counter = index"
+                    @click="activeContact = index"
                     :src="contact"
-                    :class="{'active': index === counter}" 
+                    :class="{'active': index === activeContact}" 
                     >
                         <div class="utentImg">
                             <img :src="contact.avatar" alt="">
@@ -55,11 +55,9 @@
                                 {{message}}</p>
                         </div>
                         <div class="utentLastAcces">
-                            <span>{{clock}}</span>
+                            <span>12.00</span>
                         </div>
-
                     </li>
-
                 </ul>
             </div>
         </div>
@@ -67,12 +65,12 @@
             <div class="chatBar">
                 <div class="activeUserBar">
                     <div class="userImg">
-                        <img :src="contacts[counter].avatar" alt="">
+                        <img :src="contacts[activeContact].avatar" alt="">
                     </div>
                 </div>    
                 <div class="activeUserName">
-                    <span>{{contacts[counter].name}}</span>
-                    <p>Ultimo accesso oggi alle 12:00</p>
+                    <span>{{contacts[activeContact].name}}</span>
+                    <p>Ultimo accesso: {{contacts[activeContact].messages[contacts[activeContact].messages.length - 1].date}}</p>
                 </div>    
                 <div class="buttonsGrid">
                     <i class="fa-solid fa-magnifying-glass"></i>
@@ -82,8 +80,7 @@
             </div>
             <div class="chatCont">
                 <ul>
-
-                    <li v-for="(message, index) in contacts[counter].messages">
+                    <li v-for="(message, index) in contacts[activeContact].messages">
                         <div :class="message.status === 'sent' ? 'user' : 'utent'" class="sms">
                             <span>{{message.message}}</span>
                             <div class="sendTime">{{message.date}}</div>
@@ -96,7 +93,7 @@
                     <i class="fa-regular fa-face-smile"></i>
                 </div>
                 <div class="textSend">
-                    <input type="text" v-model="newMessage.message" placeholder="Scrivi un messaggio" @keyup.enter="sendMessage">
+                    <input type="text" v-model="inputMessage" placeholder="Scrivi un messaggio" @keyup.enter="sendMessage">
                 </div>
                 <div class="audioSend">
                     <i class="fa-solid fa-microphone"></i>
