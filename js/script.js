@@ -170,6 +170,7 @@ createApp({
       ],
       activeContact: 0,
       inputMessage: "",
+      inputSearch: "",
     };
   },
   methods: {
@@ -198,6 +199,9 @@ createApp({
         };
         this.contacts[replyTo].messages.push(answer);
       }, 1000);
+    },
+    searchContact() {
+      console.log(this.inputSearch);
     },
   },
   mounted() {},

@@ -182,7 +182,7 @@ i {
 
 /* userCont  */
 
-.userCont li {
+.userCont .userSubCont {
     display: flex;
     width: 100%;
     height: 80px;
