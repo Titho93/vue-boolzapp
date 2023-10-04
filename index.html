@@ -87,7 +87,12 @@
                     <li v-for="(message, index) in contacts[activeContact].messages">
                         <div :class="message.status === 'sent' ? 'user' : 'utent'" class="sms">
                             <span>{{message.message}}</span>
-                            <div class="sendTime">{{message.date}}</div>
+                            <div class="rightMessage">
+                                <div class="deleteMenu">
+                                    <div class="arrow"><i class="fa-solid fa-chevron-down"></i></div>
+                                </div>
+                                <div class="sendTime">{{message.date}}</div>
+                            </div>
                         </div>
                     </li>
                 </ul>

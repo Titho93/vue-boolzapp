@@ -308,6 +308,11 @@ i {
     flex-grow: 2;
 }
 
+.chatCont .sms .rightMessage {
+    display: flex;
+    flex-direction: column;
+}
+
 .chatCont .sms .sendTime {
     align-self: flex-end;
     font-size: 10px;
@@ -315,4 +320,16 @@ i {
     flex-grow: 0;
     padding-right: 5px;
     padding-bottom: 5px;
+}
+
+/* deleteMenu  */
+
+.deleteMenu  {
+    height: 35px;
+    display: flex;
+    justify-content: end;
+}
+
+.deleteMenu i {
+    margin-right: 5px;
 }
