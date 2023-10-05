@@ -171,6 +171,7 @@ createApp({
       activeContact: 0,
       inputMessage: "",
       inputSearch: "",
+      bannerMenu: false,
     };
   },
   methods: {
